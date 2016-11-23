@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::group(['prefix' => 'admin'], function () {
+//    Route::get('users', function () {
+//        // 匹配 "/admin/users" URL
+//    });
+//});
+Route::get('/user/{id}','Usercontroller@index');
+Route::get('/login','Logincontroller@index');
